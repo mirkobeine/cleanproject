@@ -17,7 +17,7 @@ public class BookApplicationService {
         this.bookRepository = bookRepository;
     }
 
-    public List<Book> findAll() {
-        return this.bookRepository.findAll();
+    public List<Book> findAllBooks() {
+        return this.bookRepository.findAllBooks();
     }
 }

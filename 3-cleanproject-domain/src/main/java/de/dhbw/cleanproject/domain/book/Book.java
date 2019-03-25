@@ -1,5 +1,7 @@
 package de.dhbw.cleanproject.domain.book;
 
+import org.apache.commons.lang3.Validate;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -30,6 +32,11 @@ public class Book {
     }
 
     public Book(String isbn, String title, String author, LocalDate yearOfPublication) {
+        Validate.notBlank(isbn);
+        Validate.notBlank(title);
+        Validate.notBlank(author);
+        Validate.notNull(yearOfPublication);
+
         this.isbn = isbn;
         this.title = title;
         this.author = author;

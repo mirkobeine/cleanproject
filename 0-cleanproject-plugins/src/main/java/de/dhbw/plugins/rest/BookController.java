@@ -27,7 +27,7 @@ public class BookController {
 
     @RequestMapping(method = RequestMethod.GET)
     public List<BookResource> getBooks() {
-        return this.bookApplicationService.findAll().stream()
+        return this.bookApplicationService.findAllBooks().stream()
                 .map(bookToBookResourceMapper)
                 .collect(Collectors.toList());
     }

@@ -10,20 +10,20 @@ import java.util.List;
 @Repository
 public class BookRepositoryBridge implements BookRepository {
 
-    private SpringDataBookRepository springBookRepository;
+    private SpringDataBookRepository springDataBookRepository;
 
     @Autowired
-    public BookRepositoryBridge(SpringDataBookRepository springBookRepository) {
-        this.springBookRepository = springBookRepository;
+    public BookRepositoryBridge(SpringDataBookRepository springDataBookRepository) {
+        this.springDataBookRepository = springDataBookRepository;
     }
 
     @Override
-    public List<Book> findAll() {
-        return this.springBookRepository.findAll();
+    public List<Book> findAllBooks() {
+        return this.springDataBookRepository.findAll();
     }
 
     @Override
     public Book save(Book book) {
-        return this.springBookRepository.save(book);
+        return this.springDataBookRepository.save(book);
     }
 }

@@ -19,7 +19,7 @@ public class CleanProjectApplication {
     @Bean
     public CommandLineRunner demo(BookRepository repository) {
         return (args) -> {
-            repository.save(new Book("978-3-86680-192-9", "Der Winterkönig", "Bernard Cornwell", LocalDate.now()));
+            repository.save(new Book("978-3-86680-192-9", "Der Winterkönig", "Bernard Cornwell", LocalDate.of(1996, 01, 01)));
         };
     }
 

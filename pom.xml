@@ -10,11 +10,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>0-cleanproject-abstractioncode</module>
-        <module>1-cleanproject-domain</module>
+        <module>4-cleanproject-abstractioncode</module>
+        <module>3-cleanproject-domain</module>
         <module>2-cleanproject-application</module>
-        <module>3-cleanproject-adapters</module>
-        <module>4-cleanproject-plugins</module>
+        <module>1-cleanproject-adapters</module>
+        <module>0-cleanproject-plugins</module>
     </modules>
 
     <build>

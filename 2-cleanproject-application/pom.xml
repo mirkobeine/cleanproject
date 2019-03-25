@@ -30,7 +30,7 @@
 
         <dependency>
             <groupId>de.dhbw</groupId>
-            <artifactId>1-cleanproject-domain</artifactId>
+            <artifactId>3-cleanproject-domain</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

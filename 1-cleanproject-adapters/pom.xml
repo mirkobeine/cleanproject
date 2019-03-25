@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>1-cleanproject-domain</artifactId>
+    <artifactId>1-cleanproject-adapters</artifactId>
 
     <build>
         <plugins>
@@ -30,11 +30,12 @@
 
         <dependency>
             <groupId>de.dhbw</groupId>
-            <artifactId>0-cleanproject-abstractioncode</artifactId>
+            <artifactId>2-cleanproject-application</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
 
     </dependencies>
+
 
 </project>

@@ -22,6 +22,10 @@ public class Character {
     @Embedded
     private Initiative initiative;
 
+    protected Character() {
+        //jpa
+    }
+
     public Character(String name, Level level, Initiative initiative) {
         Validate.notBlank(name);
         Validate.notNull(level);

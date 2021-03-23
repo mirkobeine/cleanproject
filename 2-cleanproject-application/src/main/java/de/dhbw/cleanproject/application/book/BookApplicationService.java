@@ -20,4 +20,8 @@ public class BookApplicationService {
     public List<Book> findAllBooks() {
         return this.bookRepository.findAllBooks();
     }
+
+//    public void createBook(CreateBookCommand createBookCommand) {
+//        //...
+//    }
 }

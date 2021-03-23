@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  dhbw-backend-db:
+    image: postgres:12.2
+    container_name: dhbw-backend-db
+    ports:
+      - "${POSTGRESQL_PORT-55432}:5432"
+    environment:
+      POSTGRES_USER: dhbw
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: dhbw

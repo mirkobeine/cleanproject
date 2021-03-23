@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="20210323093847" author="mdostmann">
+        <createTable tableName="book">
+            <column name="id" type="BIGINT" autoIncrement="false">
+                <constraints nullable="false" unique="true" primaryKey="true"/>
+            </column>
+            <column name="isbn" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="title" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="author" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="year_of_publication" type="DATE">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+
+        <createSequence cycle="false"
+                        dataType="BIGINT"
+                        incrementBy="1"
+                        minValue="1"
+                        sequenceName="seq_book_id"
+                        schemaName="public"
+                        startValue="1"/>
+
+    </changeSet>
+</databaseChangeLog>

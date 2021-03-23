@@ -4,15 +4,14 @@ import org.apache.commons.lang3.Validate;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "book")
 public class Book {
 
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_book_id")
+    @SequenceGenerator(name = "seq_book_id", initialValue = 1, allocationSize = 1)
     private Long id;
 
     @Column(name = "isbn")

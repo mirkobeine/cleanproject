@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="20210323094112" author="mdostmann">
+        <createTable tableName="character">
+            <column name="id" type="BIGINT" autoIncrement="false">
+                <constraints nullable="false" unique="true" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="level" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="initiative" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createSequence cycle="false"
+                        dataType="BIGINT"
+                        incrementBy="1"
+                        minValue="1"
+                        sequenceName="seq_character_id"
+                        schemaName="public"
+                        startValue="1"/>
+
+    </changeSet>
+</databaseChangeLog>

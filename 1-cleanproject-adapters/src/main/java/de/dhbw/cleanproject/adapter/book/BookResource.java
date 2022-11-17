@@ -1,16 +1,16 @@
-package de.dhbw.cleanproject.book;
+package de.dhbw.cleanproject.adapter.book;
 
 public class BookResource {
 
-    private String isbn;
+    private final String isbn;
 
-    private String title;
+    private final String title;
 
-    private String author;
+    private final String author;
 
-    private Integer yearOfPublication;
+    private final Integer yearOfPublication;
 
-    public BookResource(String isbn, String title, String author, Integer yearOfPublication) {
+    public BookResource(final String isbn, final String title, final String author, final Integer yearOfPublication) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;

@@ -2,6 +2,7 @@ package de.dhbw;
 
 import de.dhbw.cleanproject.domain.book.Book;
 import de.dhbw.cleanproject.domain.book.BookRepository;
+import java.util.TimeZone;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,8 @@ import java.time.LocalDate;
 public class CleanProjectApplication {
 
     public static void main(String[] args) {
+        System.setProperty("user.timezone", "UTC");
+        TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
         SpringApplication.run(CleanProjectApplication.class, args);
     }
 

@@ -1,8 +1,8 @@
 package de.dhbw.plugins.rest;
 
 import de.dhbw.cleanproject.application.book.BookApplicationService;
-import de.dhbw.cleanproject.book.BookResource;
-import de.dhbw.cleanproject.book.BookToBookResourceMapper;
+import de.dhbw.cleanproject.adapter.book.BookResource;
+import de.dhbw.cleanproject.adapter.book.BookToBookResourceMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,12 +15,12 @@ import java.util.stream.Collectors;
 @RequestMapping(value = "/api/book")
 public class BookController {
 
-    private BookApplicationService bookApplicationService;
+    private final BookApplicationService bookApplicationService;
 
-    private BookToBookResourceMapper bookToBookResourceMapper;
+    private final BookToBookResourceMapper bookToBookResourceMapper;
 
     @Autowired
-    public BookController(BookApplicationService bookApplicationService, BookToBookResourceMapper bookToBookResourceMapper) {
+    public BookController(final BookApplicationService bookApplicationService, final BookToBookResourceMapper bookToBookResourceMapper) {
         this.bookApplicationService = bookApplicationService;
         this.bookToBookResourceMapper = bookToBookResourceMapper;
     }

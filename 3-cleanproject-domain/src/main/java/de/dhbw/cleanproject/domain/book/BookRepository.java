@@ -6,5 +6,7 @@ public interface BookRepository {
 
     List<Book> findAllBooks();
 
+    List<Book> findBooksWithIsbn(String isbn);
+
     Book save(Book book);
 }

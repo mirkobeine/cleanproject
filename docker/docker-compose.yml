@@ -1,0 +1,12 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:12.10-alpine
+    ports:
+      - "55432:5432"
+    environment:
+      POSTGRES_USER: cleanproject
+      POSTGRES_PASSWORD: cleanproject
+      POSTGRES_DB: cleanproject
+      TZ: UTC
+      PGTZ: UTC

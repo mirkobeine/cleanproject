@@ -10,10 +10,9 @@ import java.util.List;
 @Service
 public class BookApplicationService {
 
-    private BookRepository bookRepository;
-
+    private final BookRepository bookRepository;
     @Autowired
-    public BookApplicationService(BookRepository bookRepository) {
+    public BookApplicationService(final BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 

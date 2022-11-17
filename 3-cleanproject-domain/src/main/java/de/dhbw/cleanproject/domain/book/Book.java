@@ -1,10 +1,10 @@
 package de.dhbw.cleanproject.domain.book;
 
+import java.util.UUID;
 import org.apache.commons.lang3.Validate;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "book")
@@ -12,8 +12,7 @@ public class Book {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID id;
 
     @Column(name = "isbn")
     private String isbn;
@@ -27,16 +26,17 @@ public class Book {
     @Column(name = "year_of_publication")
     private LocalDate yearOfPublication;
 
-    private Book() {
+    protected Book() {
         //default constructor for JPA
     }
 
-    public Book(String isbn, String title, String author, LocalDate yearOfPublication) {
+    public Book(final String isbn, final String title, final String author, final LocalDate yearOfPublication) {
         Validate.notBlank(isbn);
         Validate.notBlank(title);
         Validate.notBlank(author);
         Validate.notNull(yearOfPublication);
 
+        this.id = UUID.randomUUID();
         this.isbn = isbn;
         this.title = title;
         this.author = author;
@@ -51,7 +51,7 @@ public class Book {
         return author;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 

@@ -3,7 +3,7 @@ services:
   postgres:
     image: postgres:12.10-alpine
     ports:
-      - "55432:5432"
+      - "5432:5432"
     environment:
       POSTGRES_USER: cleanproject
       POSTGRES_PASSWORD: cleanproject

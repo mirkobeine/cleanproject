@@ -38,5 +38,3 @@ mvn properties:read-project-properties flyway:clean flyway:migrate sql:execute
 ````
 oder über RunConfiguration "seed db"
 
-
-Danach im Browser http://localhost:8080/api/book aufrufen
